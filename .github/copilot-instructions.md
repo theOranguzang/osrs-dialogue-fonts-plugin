@@ -99,7 +99,27 @@ blanked nor rendered — the original font shows normally. If you only gate in
 ./gradlew shadowJar            # fat JAR for distribution
 ```
 
-Requires **JDK 11+**. Set `JAVA_HOME` if it is not on `PATH`.
+Requires **JDK 11**. Do **not** use the IntelliJ bundled JDR (JBR) — it ships
+with Java 25 which is incompatible with Gradle 8.10.
+
+#### Setting JAVA_HOME (Windows PowerShell)
+
+IntelliJ automatically downloads a Temurin JDK 11 into `~/.jdks/` when you
+first open the project. Use that JDK for all terminal builds:
+
+```powershell
+$env:JAVA_HOME = "$env:USERPROFILE\.jdks\temurin-11.0.30"
+$env:PATH = "$env:JAVA_HOME\bin;$env:PATH"
+.\gradlew.bat clean build
+.\gradlew.bat run
+```
+
+> **Why not just use `JAVA_HOME` from the system?**  
+> The system `JAVA_HOME` on this machine points to the IntelliJ JBR (Java 25),
+> which Gradle 8.10 rejects with `Unsupported class file major version 69`.
+> IntelliJ's managed Temurin 11 at `~/.jdks/temurin-11.0.30` is the correct
+> runtime. If the folder name differs (e.g. after an IntelliJ update), run
+> `Get-ChildItem "$env:USERPROFILE\.jdks"` to find the current name.
 
 ### Verify widget indices after a game update
 

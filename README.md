@@ -57,10 +57,27 @@ Available on the [RuneLite Plugin Hub](https://runelite.net/plugin-hub/). Search
 
 ## Building from source
 
-Requires JDK 11+.
+Requires **JDK 11** (not 17, not 21, not the IntelliJ bundled JBR — those are
+incompatible with Gradle 8.10).
 
+IntelliJ IDEA automatically downloads a Temurin JDK 11 into `~/.jdks/` when
+you open the project. Use that for terminal builds:
+
+**Windows (PowerShell):**
+```powershell
+$env:JAVA_HOME = "$env:USERPROFILE\.jdks\temurin-11.0.30"
+$env:PATH = "$env:JAVA_HOME\bin;$env:PATH"
+.\gradlew.bat clean build
+.\gradlew.bat run
 ```
-./gradlew build
+
+If the folder name differs after an IntelliJ update, run `Get-ChildItem "$env:USERPROFILE\.jdks"` to find it.
+
+**macOS/Linux:**
+```bash
+export JAVA_HOME=~/.jdks/temurin-11.0.30
+./gradlew clean build
+./gradlew run
 ```
 
 ## Acknowledgments

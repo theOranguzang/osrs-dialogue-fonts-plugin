@@ -1,4 +1,4 @@
-# Better Dialogue
+# Dialogue Fonts
 
 A RuneLite plugin that replaces the hard-to-read OSRS dialogue font with a clean, configurable system font.
 
@@ -53,7 +53,7 @@ Click-to-continue and option selection work normally — click targets are widge
 
 ## Installation
 
-Available on the [RuneLite Plugin Hub](https://runelite.net/plugin-hub/). Search for "Better Dialogue" in the Plugin Hub within RuneLite.
+Available on the [RuneLite Plugin Hub](https://runelite.net/plugin-hub/). Search for "Dialogue Fonts" in the Plugin Hub within RuneLite.
 
 ## Building from source
 

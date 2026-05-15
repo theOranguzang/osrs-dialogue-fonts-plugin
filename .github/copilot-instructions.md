@@ -1,4 +1,4 @@
-# GitHub Copilot Instructions — Better Dialogue Plugin
+# GitHub Copilot Instructions — Dialogue Fonts Plugin
 
 ## What this repo is
 

@@ -1,4 +1,4 @@
-# Architecture — Better Dialogue Plugin
+# Architecture — Dialogue Fonts Plugin
 
 ## Motivation
 

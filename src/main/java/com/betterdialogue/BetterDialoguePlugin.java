@@ -36,7 +36,7 @@ import net.runelite.client.ui.overlay.OverlayManager;
 import javax.inject.Inject;
 
 /**
- * Better Dialogue — replaces the hard-to-read OSRS bitmap cursive (Quill 8)
+ * Dialogue Fonts — replaces the hard-to-read OSRS bitmap cursive (Quill 8)
  * with a clean, configurable TrueType font rendered through RuneLite's
  * {@link net.runelite.client.ui.overlay.Overlay} system.
  *
@@ -65,7 +65,7 @@ import javax.inject.Inject;
  */
 @Slf4j
 @PluginDescriptor(
-	name = "Better Dialogue",
+	name = "Dialogue Fonts",
 	description = "Replaces the OSRS dialogue font with a clean, readable TrueType font",
 	tags = {"dialogue", "font", "accessibility", "text", "npc", "chat", "readable"}
 )
@@ -88,7 +88,7 @@ public class BetterDialoguePlugin extends Plugin
 	protected void startUp()
 	{
 		overlayManager.add(overlay);
-		log.debug("Better Dialogue started");
+		log.debug("Dialogue Fonts started");
 	}
 
 	@Override
@@ -99,7 +99,7 @@ public class BetterDialoguePlugin extends Plugin
 		widgetManager.restoreAll();
 		// Clear the overlay state so stale text isn't painted after re-enable
 		overlay.setState(null);
-		log.debug("Better Dialogue stopped");
+		log.debug("Dialogue Fonts stopped");
 	}
 
 	// -------------------------------------------------------------------------

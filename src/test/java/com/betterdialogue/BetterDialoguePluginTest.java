@@ -28,7 +28,7 @@ import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
 /**
- * Test harness that launches RuneLite with Better Dialogue loaded as an
+ * Test harness that launches RuneLite with Dialogue Fonts loaded as an
  * external plugin.  Run via Gradle: {@code ./gradlew run}
  */
 public class BetterDialoguePluginTest
